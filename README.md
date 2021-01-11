@@ -14,8 +14,9 @@
 ## Steps to first compilation:
 
 In the command line:
-* \$cd build
-* \$conan install ..
+* mkdir build
+* cd build
+* conan install ..
 
 On vscode editor press:
 * F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->To compile
