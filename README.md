@@ -3,7 +3,7 @@
 
 * install cmake
 
-* install g++
+* install g++ or windows equivalent c++ compiler
 
 * install visual studio code
 
