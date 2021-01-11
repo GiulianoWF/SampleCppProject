@@ -12,16 +12,19 @@
     * CMake Tools
 
 ## Steps to first compilation:
+* Download the repository 
 
-In the command line:
-* mkdir build
-* cd build
-* conan install ..
+* Open the repository's base folder on command line
 
-On vscode editor press:
-* F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->To compile
-* Choose the compiler on the drop box
-* F5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->To run
+* In the command line:
+    * mkdir build
+    * cd build
+    * conan install ..
+
+* On vscode editor press:
+    * F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->To compile
+    * Choose the compiler on the drop box
+    * F5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->To run
 
 
 ## To add a library:
