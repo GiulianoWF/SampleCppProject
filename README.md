@@ -1,4 +1,4 @@
-##Requirements:
+## Requirements:
 * install conan package manager
 
 * install cmake
@@ -11,7 +11,7 @@
     * C/C++
     * CMake Tools
 
-##Steps to first compilation:
+## Steps to first compilation:
 
 In the command line:
 * \$cd build
@@ -23,7 +23,7 @@ On vscode editor press:
 * F5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->To run
 
 
-##To add a library:
+## To add a library:
 Add the name of the library to conanfile.txt, under the tag [required]
 
 ex.: (To add boost)
