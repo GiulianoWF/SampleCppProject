@@ -3,11 +3,19 @@
 
 * install cmake
 
-* install g++ or windows equivalent c++ compiler
+* install g++ or windows equivalent c++ compiler (clang-> "LLVM pre build binary installer")
+
+* Setup conan compiler
+    * Get conan path to profile folder "/path/to/profile/" with
+        * conan config home
+    * Set compiler variables
+        * Windows
+            * conan profile update settings.compiler=clang "/path/to/profile/"profiles/default
+            * conan profile update settings.compiler.version=11 "/path/to/profile/"profiles/default
 
 * install visual studio code
 
-* vscode extensions:
+* visual studio code extensions:
     * C/C++
     * CMake Tools
 
@@ -19,7 +27,7 @@
 * In the command line:
     * mkdir build
     * cd build
-    * conan install ..
+    * conan install .. --build=missing
 
 * On vscode editor press:
     * F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;->To compile
@@ -35,6 +43,7 @@ ex.: (To add boost)
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[requires]
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;....
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;boost/1.72.0
+* Run "conan istall .." command in the build folder
 &nbsp;
 * Add to main.cpp:
     * &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\#include <boost/optional.hpp>
