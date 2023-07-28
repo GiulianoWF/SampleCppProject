@@ -1,18 +1,26 @@
 cmake_minimum_required(VERSION 3.16)
 project(dafult_project)
 
-add_definitions("-std=c++17")
+set(CMAKE_CXX_STANDARD 20)
 
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup()
-
-include_directories("${CMAKE_SOURCE_DIR}/includes")
 
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/bin)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-# add_subdirectory(lib1_dir)
+find_package(Boost REQUIRED)
 
 add_executable(executable main.cpp)
-conan_target_link_libraries(executable)
-# target_link_libraries(executable lib1 lib2)
+target_link_libraries(executable boost::boost) 
+
+get_target_property(MY_TARGET_INCLUDE_DIRS executable INCLUDE_DIRECTORIES)
+foreach(DIR ${MY_TARGET_INCLUDE_DIRS})
+  message(STATUS "Dir='${DIR}'")
+endforeach()
+
+
+get_target_property(FOO_INCLUDE_DIRS ZLIB::ZLIB INTERFACE_INCLUDE_DIRECTORIES)
+foreach(DIR ${FOO_INCLUDE_DIRS})
+
+  message(STATUS "Foo::Foo includes='${DIR}'")
+endforeach()
 
